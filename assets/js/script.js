@@ -67,3 +67,40 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+const form = document.querySelector("form");
+  const successMsg = document.getElementById("success-message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+    })
+    .then((response) => {
+      if (response.ok) {
+        showMessage("✅ Message sent successfully!", "success");
+        form.reset();
+      } else {
+        showMessage("❌ Something went wrong. Please try again.", "error");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      showMessage("❌ Network error. Please try again.", "error");
+    });
+  });
+
+  function showMessage(message, type) {
+    successMsg.textContent = message;
+    successMsg.className = type;
+    successMsg.style.display = "block";
+
+    setTimeout(() => {
+      successMsg.style.display = "none";
+      successMsg.className = "";
+    }, 4000);
+  }
