@@ -68,11 +68,16 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
-const form = document.querySelector("form");
+  const form = document.querySelector("form");
   const successMsg = document.getElementById("success-message");
+  const submitBtn = form.querySelector(".btn");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    // Disable the button to prevent double-click
+    submitBtn.disabled = true;
+    submitBtn.value = "Sending...";
 
     const formData = new FormData(form);
 
@@ -82,15 +87,19 @@ const form = document.querySelector("form");
     })
     .then((response) => {
       if (response.ok) {
-        showMessage("✅ Message sent successfully!", "success");
+        showMessage("Message sent successfully!", "success");
         form.reset();
       } else {
-        showMessage("❌ Something went wrong. Please try again.", "error");
+        showMessage(" Something went wrong. Please try again.", "error");
+        submitBtn.disabled = false;
+        submitBtn.value = "Send Message";
       }
     })
     .catch((error) => {
       console.error("Error:", error);
-      showMessage("❌ Network error. Please try again.", "error");
+      showMessage(" Network error. Please try again.", "error");
+      submitBtn.disabled = false;
+      submitBtn.value = "Send Message";
     });
   });
 
@@ -102,5 +111,10 @@ const form = document.querySelector("form");
     setTimeout(() => {
       successMsg.style.display = "none";
       successMsg.className = "";
+      if (type === "success") {
+        // Optional: Keep button disabled on success
+        submitBtn.disabled = true;
+        submitBtn.value = "Sent ";
+      }
     }, 4000);
   }
