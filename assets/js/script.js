@@ -66,3 +66,27 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+ document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent form from reloading the page
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/AKfycbyIasSZnwes0fxLZnP_vP5psyvgQeY-eLjs-1F8j4-b/dev", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById("success-message").style.display = "block";
+        form.reset(); // clear the form
+      } else {
+        alert("❌ There was a problem submitting your message.");
+      }
+    })
+    .catch(error => {
+      console.error("Error!", error.message);
+      alert("❌ Something went wrong. Please try again.");
+    });
+  });
