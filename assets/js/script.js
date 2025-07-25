@@ -48,30 +48,6 @@ window.onscroll = () => {
   });
 
 
-  document.getElementById("contact").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const formData = new FormData(form);
-
-    fetch("https://script.google.com/macros/s/AKfycbyIasSZnwes0fxLZnP_vP5psyvgQeY-eLjs-1F8j4-b/dev", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        document.getElementById("success-message").style.display = "block";
-        form.reset();
-      } else {
-        alert("❌ There was a problem submitting your message.");
-      }
-    })
-    .catch(error => {
-      console.error("Error!", error.message);
-      alert("❌ Something went wrong. Please try again.");
-    });
-  });
-
 ScrollReveal ({
     // reset: true,
     distance: '80px',
