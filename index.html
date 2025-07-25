@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome v6 Free CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class="bxr bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, My name is</h3>
+            <h1>Farhan Ishrat</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p> A passionate Full Stack Web Developer with expertise in HTML, CSS, Bootstrap,
+                JavaScript, and jQuery Laravel, PHP, MySQL, WordPress.
+                I build dynamic, user-friendly websites and web applications that
+                deliver real-world results.
+                <br>
+                <br>
+                📬 Email: farhanishrat556@gmail.com
+                <br>
+
+                📱 WhatsApp: +92 319 7508346
+            </p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/farhan-malik-263369367/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61578879501703"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/devwithfarhan/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="assets/CV/Farhan ishrat Resume linkedin.pdf" class="btn">Download Curriculum Vitae(CV)</a>
+        </div>
+
+        <div class="home-img">
+            <img src="assets/profoile/DP5.png" alt="">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/profoile/DP5.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Full Stack Developer</h3>
+            <p class="intro-text"> I have over one year of hands-on experience as a Full Stack Web Developer,
+                with a strong command of HTML, CSS, Bootstrap, JavaScript, jQuery, PHP, MySQL,
+                Laravel, and WordPress.</p>
+
+            <p class="more-text" id="readmore-1">Alongside my development skills, I also have knowledge of
+                SEO and digital marketing, which helps me build websites that are not only
+                functional but also optimized for search engines. During my journey, I’ve
+                successfully developed various real-world projects including a complete POS
+                (Point of Sale) system, an eCommerce website, business websites, admin panels,
+                and custom web applications. My focus is always on delivering clean, responsive,
+                and user-friendly solutions tailored to client needs.</p>
+            <button onclick="toggleReadMore()" class="read-more-btn btn" data-target="readmore-1">Read More</button>
+
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Full Stack Web Development</h3>
+                <p class="intro-text">I develop complete web applications from frontend to backend
+                    using modern technologies like HTML, CSS, JavaScript, and jQuery, Laravel, PHP,
+                    MySQL. Whether it’s a business solution, dashboard, or custom tool — I build it
+                    from scratch.</p>
+
+                <p class="more-text" id="readmore-2">
+                    I build projects like dashboards, admin panels, POS systems, and complete business
+                    websites tailored to client needs. My approach focuses on writing clean, secure, and
+                    scalable code, ensuring long-term project stability and high performance.
+                </p>
+                <button id="fs-btn" class="read-more-btn btn" data-target="readmore-2">Read More</button>
+            </div>
+
+            <div class="services-box">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Custom Website Design & Development</h3>
+                <p class="intro-text">Get a unique, responsive, and fast-loading website tailored to your brand.
+                    I craft websites that are visually appealing, user-friendly, and built for
+                    performance.</p>
+
+                <p class="more-text" id="readmore-3">
+                    I design and develop custom websites that reflect your brand identity
+                    and goals. Every project starts with understanding your business needs,
+                    followed by a carefully planned design that aligns with modern UI/UX standards.
+                    Whether it's a portfolio, blog, or business website, I ensure the site is
+                    mobile-responsive, SEO-friendly, and optimized for speed and performance.
+                    I also offer ongoing support and updates to keep your site secure and up to date.
+                </p>
+                <button id="fs-btn" class="read-more-btn btn" data-target="readmore-3">Read More</button>
+
+            </div>
+            <div class="services-box">
+                <i class="fab fa-wordpress"></i>
+                <h3>WordPress Development</h3>
+                <p class="intro-text">From custom themes to plugin integration, I provide full WordPress development
+                    services, including blogs, eCommerce (WooCommerce), business sites, and more.</p>
+
+                <p class="more-text" id="readmore-4" ;>
+                    I specialize in developing fully customized WordPress websites that are fast,
+                    secure, and easy to manage. Whether you need a simple blog, a feature-rich
+                    WooCommerce store, or a dynamic business website, I handle everything from
+                    theme customization and plugin integration to SEO optimization and performance
+                    tuning. I also offer WordPress maintenance, backups, and security services to
+                    ensure your site stays running smoothly long after launch.
+                </p>
+                <button id="fs-btn" class="read-more-btn btn" data-target="readmore-4">Read More</button>
+            </div>
+
+            <div class="services-box">
+                <i class="fas fa-tools"></i>
+                <h3>Bug Fixing & Website Maintenance</h3>
+                <p class="intro-text">Already have a website? I offer professional debugging, error fixing,
+                    plugin/theme updates, and regular maintenance to keep your site running
+                    smoothly.</p>
+                <p class="more-text" id="readmore-5">
+                    I help diagnose and fix issues like broken layouts, slow loading times,
+                    PHP or JavaScript errors, and compatibility problems with plugins or themes.
+                    My website maintenance service includes regular updates, performance checks,
+                    backups, and security scans to prevent downtime and keep your website secure
+                    and efficient. Whether you're facing a critical bug or need ongoing care, I
+                    provide reliable and timely support.
+                </p>
+                <button id="fs-btn" class="read-more-btn btn" data-target="readmore-5">Read More</button>
+
+            </div>
+            <div class="services-box">
+                <i class="fas fa-layer-group"></i>
+                <h3>Landing Pages & UI Development</h3>
+                <p class="intro-text">I design and code attractive landing pages optimized for conversion using HTML,
+                    CSS, Bootstrap, and JavaScript.</p>
+                <p class="more-text" id="readmore-6">
+                    I specialize in creating high-converting, mobile-responsive landing pages
+                    that are visually appealing and aligned with your marketing goals. Using
+                    clean HTML, CSS, Bootstrap, and JavaScript, I ensure fast load times, smooth
+                    animations, and an intuitive user experience. Whether it's a product launch,
+                    lead capture, or promotional campaign, I design each section to guide users
+                    toward your call to action and maximize conversions.
+
+                </p>
+                <button id="fs-btn" class="read-more-btn btn" data-target="readmore-6">Read More</button>
+
+            </div>
+            <div class="services-box">
+                <i class="fas fa-database"></i>
+                <h3>Database Design & Integration</h3>
+                <p class="intro-text">Efficient and secure MySQL database design, development, and integration
+                    with your web applications, admin panels, or content management systems.</p>
+                <p class="more-text" id="readmore-7">
+                    I design normalized and scalable MySQL databases tailored to your application's
+                    structure and performance needs. From user authentication systems to complex
+                    relational data models, I ensure your database is secure, efficient, and easy
+                    to maintain. I also handle seamless integration with PHP, Laravel, WordPress,
+                    or any custom backend, enabling dynamic content management and real-time data
+                    interaction within your web applications or admin panels.
+
+                </p>
+                <button id="fs-btn" class="read-more-btn btn" data-target="readmore-7">Read More</button>
+
+            </div>
+            <div class="services-box">
+                <i class="fas fa-tachometer-alt"></i>
+                <h3>Performance Optimization</h3>
+                <p class="intro-text">I optimize websites for speed, SEO, and mobile responsiveness—ensuring
+                    fast load times, reduced bounce rates, and better search engine rankings.</p>
+                <p class="more-text" id="readmore-8">
+                    I analyze and improve website performance by minimizing code, compressing
+                    images, leveraging browser caching, and implementing lazy loading where needed.
+                    I also focus on mobile-first design principles to ensure responsiveness across
+                    all devices. Beyond speed, I apply on-page SEO techniques, structured data, and
+                    technical enhancements that help your website rank better on search engines and
+                    deliver a seamless user experience.
+                </p>
+                <button id="fs-btn" class="read-more-btn btn" data-target="readmore-8">Read More</button>
+
+            </div>
+            <div class="services-box">
+                <i class="fas fa-file-code"></i>
+                <h3> Convert Designs to Code (Figma to HTML)</h3>
+                <p class="intro-text">Have a design ready in Figma, PSD, or XD? I can convert it into clean,
+                    pixel-perfect, responsive HTML/CSS/JS code.</p>
+                <p class="more-text" id="readmore-9">
+                    I specialize in converting UI/UX designs from tools like Figma, PSD, and
+                    Adobe XD into fully responsive and W3C-compliant HTML/CSS code. Each element
+                    is carefully implemented to match the design pixel-by-pixel, ensuring
+                    consistency across devices and browsers. I also integrate JavaScript or
+                    jQuery for interactive components like sliders, animations, and modals,
+                    making the static design fully functional and user-friendly.
+                </p>
+                <button id="fs-btn" class="read-more-btn btn" data-target="readmore-9">Read More</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <div class="portfolio1-img">
+            <img src="assets/project-images/Portfolio 1 image.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <br><br>
+            <h2 class="heading">🛍️ Ideal Collection – <span>WordPress eCommerce Website</span></h2>
+            <h3><span>Project Type:</span> Full-Featured Online Store
+                <br>
+                <span>Role:</span> Full Stack WordPress Developer
+                <br>
+                <span>Tools & Technologies:</span> WordPress, Elementor, WooCommerce, Hostinger, Safepay
+                <br>
+                <span>Hosting & Domain:</span> Hostinger
+            </h3>
+            <p class="intro-text"><span>🔍 Project Overview:</span>
+                <br>
+                Ideal Collection is a responsive and user-friendly eCommerce website built using WordPress and
+                WooCommerce. It was designed to provide a seamless online shopping experience, showcasing products with
+                swatches, wishlist features, and secure checkout integrations. The website includes modern UI components
+                and is optimized for performance and mobile responsiveness.
+                <br>
+                <br>
+                <span>⚙️ Key Features Implemented:</span>
+                <br>
+                ✅ Custom-designed pages with Elementor & Elementskit Lite
+                <br>
+                ✅ Secure Payment Gateway integrated using Safepay for WooCommerce
+                <br>
+                ✅ Product Wishlist functionality with TI WooCommerce Wishlist
+                <br>
+                ✅ Enhanced product display using Variation Swatches for WooCommerce
+                <br>
+                ✅ Optimized for speed with LiteSpeed Cache
+                <br>
+                ✅ Contact functionality using Contact Form 7
+                <br>
+                ✅ SEO-friendly and lightweight layout using Classic Widgets
+                <br>
+                ✅ Full site backup & migration enabled using All-in-One WP Migration & Backup
+            </p>
+
+            <p class="more-text" id="readmore-10"><span>🛠️ Plugins Used:</span>
+                <br>
+                All-in-One WP Migration & Backup
+                <br>
+                Classic Widgets
+                <br>
+                Contact Form 7
+                <br>
+                Elementor
+                <br>
+                Elementskit Lite
+                <br>
+                Hostinger Easy Onboarding & Tools
+                <br>
+                LiteSpeed Cache
+                <br>
+                Safepay for WooCommerce
+                <br>
+                TI WooCommerce Wishlist
+                <br>
+                Variation Swatches for WooCommerce
+                <br>
+                WooCommerce
+                <br>
+                <br>
+                <span>🌐 Hosting Provider:</span>
+                <br>
+                Hostinger (Domain & Hosting)
+            </p>
+            <button onclick="toggleReadMore()" class="read-more-btn btn" data-target="readmore-10">Read More</button>
+
+        </div>
+
+        <br><br><br><br>
+
+        <div class="portfolio2-img">
+            <img src="assets/project-images/portfolio 2 image.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <br><br>
+            <h2 class="heading">🧾 Cash & Carry Management System – <span>Web-Based POS & Inventory Software
+                </span></h2>
+            <h3><span>Project Type:</span> Business Software / POS & Inventory System
+                <br>
+                <span>Role:</span> Full Stack Developer
+                <br>
+                <span>Tools & Technologies:</span> HTML, CSS, JavaScript, jQuery, Bootstrap, PHP, MySQL
+                <br>
+                <span>Features:</span> Dashboard, POS, Inventory, Sales Tracking, Employee Activity, Reports
+                <br>
+                <span>Theme Modes:</span> Light Mode, Dark Mode, Custom Color Paint Option
+            </h3>
+            <p class="intro-text"><span>🔍 Project Overview:</span>
+                <br>
+                The Cash & Carry Management System is a comprehensive web-based software solution designed for retail
+                environments. It enables streamlined point-of-sale operations, real-time inventory tracking, employee
+                activity monitoring, and financial reporting — all within a responsive and user-friendly dashboard.
+
+                Built with a modular sidebar layout, the system provides easy navigation across all key business
+                operations. The software supports both Manager and Staff Login, offering role-based access to
+                functionality.
+               
+            </p>
+
+            <p class="more-text" id="readmore-11">
+               
+                <span>🧩 Key Modules & Features:</span>
+                <br><br>
+                <span>📊 Dashboard</span>
+                <br>
+                Displays Total Sales, Total Profit, Total Stocks, Total Customers
+                <br>
+                Includes POS Activity Graph for visual insights
+                <br>
+                Sidebar with Minimize/Expand button for compact view
+                <br>
+                Light / Dark Mode toggle and Custom Color Paint Tool to personalize UI
+                <br><br>
+                <span>🧾 Billing Section</span>
+                <br>
+                Real-time billing interface with receipt generation
+                <br>
+                Quick product search, barcode scan, and discount options
+                <br><br>
+                <span>📈 Sales Section</span>
+                <br>
+                No. of Sales, Total Revenue, Total Profit
+                <br>
+                Filtered views for daily, weekly, and monthly sales
+                <br><br>
+                <span>📦 Inventory Section</span>
+                <br>
+                Sub-sections:
+                <br>
+                1- No. of Items
+                <br>
+                2- Update Items
+                <br>
+                3- Out of Stock Items
+                <br>
+                Automatic stock level detection and alert system
+                <br><br>
+                <span>👥 Customer Management</span>
+                <br>
+                Sub-sections:
+                <br>
+                1- No. of Customers
+                <br>
+                2- Add Customers
+                <br>
+                3- Update Customer Info
+                <br><br>
+                <span>🧾 Order Management</span>
+                <br>
+                Sub-sections:
+                <br>
+                1- New Orders
+                <br>
+                2- Pending Orders
+                <br>
+                3- Completed Orders
+                <br>
+                4- Refunds / Returns
+                <br><br>
+                <span>🧑‍💼 Employee / Staff Activity</span>
+                <br>
+                Sub-sections:
+                <br>
+                1- Active Cashiers
+                <br>
+                2- Sales by Employee
+                <br>
+                3- Time Clock / Shift Summary
+                <br><br>
+                <span>📑 Reports Section</span>
+                <br>
+                Sub-sections:
+                <br>
+                1- Sales Reports
+                <br>
+                2- Product Performance
+                <br>
+                3- Financial Reports
+                <br>
+                Export options in PDF/CSV for business analysis
+                <br><br>
+                <span>🎯 Key Highlights:</span>
+                <br>
+                ✅ Role-based login system (Manager & Staff)
+                <br>
+                ✅ Modern, responsive UI with color and theme customization
+                <br>
+                ✅ Sidebar navigation with collapse/expand toggle
+                <br>
+                ✅ Modular structure for easy future scaling
+            </p>
+            <button onclick="toggleReadMore()" class="read-more-btn btn" data-target="readmore-11">Read More</button>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Farhan Ishrat | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
