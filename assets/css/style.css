@@ -378,6 +378,15 @@ span {
     cursor: pointer;
 }
 
+#success-message {
+      display: none;
+      color: green;
+      background-color: #e0ffe0;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
 .footer {
     display: flex;
     justify-content: space-between;
