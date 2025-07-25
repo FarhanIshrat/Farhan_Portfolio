@@ -46,28 +46,8 @@ window.onscroll = () => {
       }
     });
   });
-
-ScrollReveal ({
-    // reset: true,
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
-
-ScrollReveal().reveal('.home-content, .heading', {origin: 'top'});
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', {origin: 'bottom'});
-ScrollReveal().reveal('.home-content h1, .about-img', {origin: 'left'});
-ScrollReveal().reveal('.home-content p, .about-content', {origin: 'right'});
-
-const typed = new Typed('.multiple-text', {
-    strings: ['Full Stack Developer', 'Laravel Developer','WordPress Developer', 'Creative Web Designer'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});
-
- document.getElementById("contact").addEventListener("submit", function (e) {
+<script>
+  document.getElementById("contact").addEventListener("submit", function (e) {
     e.preventDefault(); // prevent form from reloading the page
 
     const form = e.target;
@@ -90,3 +70,25 @@ const typed = new Typed('.multiple-text', {
       alert("❌ Something went wrong. Please try again.");
     });
   });
+</script>
+
+
+ScrollReveal ({
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .heading', {origin: 'top'});
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', {origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img', {origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-content', {origin: 'right'});
+
+const typed = new Typed('.multiple-text', {
+    strings: ['Full Stack Developer', 'Laravel Developer','WordPress Developer', 'Creative Web Designer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
