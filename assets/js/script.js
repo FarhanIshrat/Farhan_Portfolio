@@ -49,7 +49,7 @@ window.onscroll = () => {
 
 
   document.getElementById("contact").addEventListener("submit", function (e) {
-    e.preventDefault(); // prevent form from reloading the page
+    e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
@@ -61,7 +61,7 @@ window.onscroll = () => {
     .then(response => {
       if (response.ok) {
         document.getElementById("success-message").style.display = "block";
-        form.reset(); // clear the form
+        form.reset();
       } else {
         alert("❌ There was a problem submitting your message.");
       }
