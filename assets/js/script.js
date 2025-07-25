@@ -79,7 +79,7 @@ const typed = new Typed('.multiple-text', {
     })
     .then(response => {
       if (response.ok) {
-        document.getElementById("success").style.display = "block";
+        document.getElementById("success-message").style.display = "block";
         form.reset(); // clear the form
       } else {
         alert("❌ There was a problem submitting your message.");
