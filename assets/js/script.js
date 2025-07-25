@@ -67,7 +67,7 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
- document.getElementById("contact-form").addEventListener("submit", function (e) {
+ document.getElementById("contact").addEventListener("submit", function (e) {
     e.preventDefault(); // prevent form from reloading the page
 
     const form = e.target;
