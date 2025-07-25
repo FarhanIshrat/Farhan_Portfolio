@@ -46,7 +46,8 @@ window.onscroll = () => {
       }
     });
   });
-<script>
+
+
   document.getElementById("contact").addEventListener("submit", function (e) {
     e.preventDefault(); // prevent form from reloading the page
 
@@ -70,8 +71,6 @@ window.onscroll = () => {
       alert("❌ Something went wrong. Please try again.");
     });
   });
-</script>
-
 
 ScrollReveal ({
     // reset: true,
