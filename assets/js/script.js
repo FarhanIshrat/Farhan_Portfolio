@@ -68,14 +68,23 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
-  const form = document.querySelector("form");
+ const form = document.querySelector("form");
   const successMsg = document.getElementById("success-message");
   const submitBtn = form.querySelector(".btn");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Disable the button to prevent double-click
+    // Get email field and validate it
+    const email = form.querySelector('input[name="email"]').value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      showMessage("Please enter a valid email address.", "error");
+      return;
+    }
+
+    // Disable button
     submitBtn.disabled = true;
     submitBtn.value = "Sending...";
 
@@ -90,14 +99,14 @@ const typed = new Typed('.multiple-text', {
         showMessage("Message sent successfully!", "success");
         form.reset();
       } else {
-        showMessage(" Something went wrong. Please try again.", "error");
+        showMessage("Something went wrong. Please try again.", "error");
         submitBtn.disabled = false;
         submitBtn.value = "Send Message";
       }
     })
     .catch((error) => {
       console.error("Error:", error);
-      showMessage(" Network error. Please try again.", "error");
+      showMessage("Network error. Please try again.", "error");
       submitBtn.disabled = false;
       submitBtn.value = "Send Message";
     });
@@ -112,7 +121,6 @@ const typed = new Typed('.multiple-text', {
       successMsg.style.display = "none";
       successMsg.className = "";
       if (type === "success") {
-        // Optional: Keep button disabled on success
         submitBtn.disabled = true;
         submitBtn.value = "Sent ";
       }
